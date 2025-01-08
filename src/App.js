@@ -15,6 +15,7 @@ function App() {
           <Route path="/restaurants" element={<Restaurants />} />
           <Route path="/restaurants/lindo" element={<LindoRestaurants />} />
           <Route path="/restaurants/maya" element={<MayaRestaurants />} />
+          <Route path="/restaurants/beach-and-del-mar" element={<DelMarBeachRestaurants />} />
         </Routes>
       </div>
     </Router>
@@ -228,7 +229,7 @@ const Restaurants = () => {
     }
   ];
 
-  const hotels = ['Maya', 'Lindo', 'Beach', 'Del Mar'];
+  const hotels = ['Maya', 'Lindo', 'Beach and Del Mar'];
 
   return (
     <div className="restaurants-page">
@@ -254,11 +255,16 @@ const Restaurants = () => {
         <p>Guests at JOIA Paraiso can enjoy buffets, bars, and à la carte restaurants across the entire Iberostar complex.</p>
       </div>
       <div className="hotel-cards-grid">
-        {hotels.map((hotel, index) => (
-          <Link to={`/restaurants/${hotel.toLowerCase()}`} key={index} className="hotel-card">
-            <h2>{hotel}</h2>
-          </Link>
-        ))}
+      {hotels.map((hotel, index) => (
+        <Link 
+          to={`/restaurants/${hotel.toLowerCase().replace(/ /g, '-')}`} 
+          key={index} 
+          className="hotel-card"
+        >
+          <h2>{hotel}</h2>
+        </Link>
+      ))}
+
       </div>
     </div>
   );
@@ -397,6 +403,93 @@ const MayaRestaurants = () => {
         <Link to="/restaurants">🔙 Back to Restaurants</Link>
       </nav>
       <h1>Maya Restaurants</h1>
+      <div className="restaurant-cards-grid">
+        {restaurants.map((restaurant, index) => (
+          <div key={index} className="restaurant-card">
+            <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
+            <h2>{restaurant.name}</h2>
+            <p>{restaurant.description}</p>
+            <p><strong>Hours:</strong> {restaurant.hours}</p>
+            <p><strong>Dress Code:</strong> {restaurant.dressCode}</p>
+            <p><strong>Reservations:</strong> {restaurant.reservations}</p>
+            {restaurant.menu && (
+              <p>
+                <a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+                  <strong>See the menu</strong>
+                </a>
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const DelMarBeachRestaurants = () => {
+  const restaurants = [
+    { 
+      name: 'Hashiru Teppanyaki', 
+      description: 'Japanese teppanyaki featuring makis, nigiris, and rolls prepared live.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Reservations required at hotel', 
+      image: 'https://lh3.googleusercontent.com/proxy/OGK8G5a5Pq3rRNx90b1JHArKYi9DvRdGairljofkHYpb2ZxSSGewEM6YBfDqe27dQsWbrN1_1gTBOd2ZQWJM_zfcyZN7gV6LohUIJNs', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/1975/document.pdf' 
+    },
+    { 
+      name: 'La Hacienda Mexican Restaurant', 
+      description: 'Traditional Mexican dishes including tacos, fajitas, and cochinita pibil.', 
+      hours: '6:30 p.m. to 9:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not required', 
+      image: 'https://digital.ihg.com/is/image/ihg/independent-riviera-maya-9149915507-2x1', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/4794/document.pdf' 
+    },
+    { 
+      name: 'Star Rock Café', 
+      description: 'American-style menu featuring wings, sandwiches, and BBQ ribs.', 
+      hours: '1:00 p.m. to 4:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not required', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/10/46/4c/8f/star-rock-cafe-iberostar.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/6239/document.pdf' 
+    },
+    { 
+      name: 'El Colonial French Restaurant', 
+      description: 'French haute cuisine with classic dishes like onion soup and steak tartare.', 
+      hours: '6:30 p.m. to 9:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not required', 
+      image: 'https://digital.ihg.com/is/image/ihg/independent-riviera-maya-9149915512-2x1', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/4796/document.pdf' 
+    },
+    { 
+      name: 'Smoke House', 
+      description: 'Texan-style smoked meats cooked over indirect fire.', 
+      hours: '6:30 p.m. to 9:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not required', 
+      image: 'https://apiimg.iberostar.com/uploads/image/68185/crops/16:9/1920/image.jpeg', 
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6420/document.pdf' 
+    },
+    { 
+      name: 'El Rodizio Brazilian Restaurant', 
+      description: 'Brazilian-style buffet featuring cold appetizers and grilled meats.', 
+      hours: '6:30 p.m. to 10:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Via mobile app', 
+      image: 'https://www.iberostarparaisodelmar.com/images/restaurants/rodizio.jpg', 
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6606/document.pdf' 
+    }
+  ];
+
+  return (
+    <div className="restaurants-page">
+      <nav className="navbar">
+        <Link to="/restaurants">🔙 Back to Restaurants</Link>
+      </nav>
+      <h1>Del Mar & Beach Restaurants</h1>
       <div className="restaurant-cards-grid">
         {restaurants.map((restaurant, index) => (
           <div key={index} className="restaurant-card">
