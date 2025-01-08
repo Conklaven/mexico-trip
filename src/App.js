@@ -171,7 +171,7 @@ const Restaurants = () => {
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHh1sktJfwdJS6pia6LoMRiJzRLTJrdNsSBg&s',
-      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6762/document.pdf'
     },
     { 
       name: 'L’Atelier Gourmet', 
@@ -225,7 +225,6 @@ const Restaurants = () => {
       dressCode: 'Casual', 
       reservations: 'Not necessary', 
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/44/35/11/caption.jpg?w=1200&h=-1&s=1',
-      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
     }
   ];
 
