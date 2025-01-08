@@ -65,7 +65,7 @@ const Itinerary = () => {
     { 
       date: 'April 15th', 
       activity: 'Flight to Cancun - Private transport to JOIA Paraiso',
-      images: ['/images/day2-1.jpg', '/images/day2-2.jpg', '/images/day2-3.jpg']
+      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92MmQK9lhRWoh73xZVpk-x4ECUnrKs6VG4A&shttps://content.r9cdn.net/rimg/dimg/7d/53/6c3c1580-al-AA-55b57246.jpg', '/images/day2-2.jpg', '/images/day2-3.jpg']
     },
     { 
       date: 'April 16th', 
