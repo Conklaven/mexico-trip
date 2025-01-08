@@ -60,7 +60,7 @@ const Itinerary = () => {
     { 
       date: 'April 14th', 
       activity: 'Drive from Memphis to St. Louis',
-      images: ['/images/day1-1.jpg', '/images/day1-2.jpg', '/images/day1-3.jpg']
+      images: ['/images/day1.jpg', '/images/day1-2.jpg', '/images/day1-3.jpg']
     },
     { 
       date: 'April 15th', 
