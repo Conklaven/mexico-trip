@@ -13,6 +13,8 @@ function App() {
           <Route path="/itinerary" element={<Itinerary />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/restaurants/lindo" element={<LindoRestaurants />} />
+          <Route path="/restaurants/maya" element={<MayaRestaurants />} />
         </Routes>
       </div>
     </Router>
@@ -253,9 +255,165 @@ const Restaurants = () => {
       </div>
       <div className="hotel-cards-grid">
         {hotels.map((hotel, index) => (
-          <Link to={`/hotel/${hotel.toLowerCase()}`} key={index} className="hotel-card">
+          <Link to={`/restaurants/${hotel.toLowerCase()}`} key={index} className="hotel-card">
             <h2>{hotel}</h2>
           </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const LindoRestaurants = () => {
+  const restaurants = [
+    { 
+      name: 'Under the Sea', 
+      description: 'American-style family restaurant focusing on sustainable fish dishes.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/underthesea.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/1977/document.pdf' 
+    },
+    { 
+      name: 'Lemon & Spices', 
+      description: 'Traditional Greek recipes with sustainably sourced fish.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/lemonspices.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/1902/document.pdf' 
+    },
+    { 
+      name: 'Trattoria Olivetti', 
+      description: 'À la carte lunch with Italian specialties.', 
+      hours: 'Lunch: 1:00 p.m. to 3:00 p.m. | Dinner: 6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/trattoria.jpg', 
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6532/document.pdf' 
+    },
+    { 
+      name: 'El Rancho Steak House', 
+      description: 'The best cuts of meat for an à la carte dinner.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/elrancho.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/6556/document.pdf' 
+    },
+    { 
+      name: 'El Tapatío', 
+      description: 'Traditional Mexican recipes from all over the country.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/tapatio.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2059/document.pdf' 
+    }
+  ];
+
+  return (
+    <div className="restaurants-page">
+      <nav className="navbar">
+        <Link to="/restaurants">🔙 Back to Restaurants</Link>
+      </nav>
+      <h1>Lindo Restaurants</h1>
+      <div className="restaurant-cards-grid">
+        {restaurants.map((restaurant, index) => (
+          <div key={index} className="restaurant-card">
+            <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
+            <h2>{restaurant.name}</h2>
+            <p>{restaurant.description}</p>
+            <p><strong>Hours:</strong> {restaurant.hours}</p>
+            <p><strong>Dress Code:</strong> {restaurant.dressCode}</p>
+            <p><strong>Reservations:</strong> {restaurant.reservations}</p>
+            {restaurant.menu && (
+              <p>
+                <a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+                  <strong>See the menu</strong>
+                </a>
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const MayaRestaurants = () => {
+  const restaurants = [
+    { 
+      name: 'El Rodizio Brazilian Restaurant', 
+      description: 'Buffet with Brazilian specialties including shrimp ceviche, sirloin, and grilled vegetables.', 
+      hours: '6:30 p.m. to 10:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Reservations via mobile app', 
+      image: 'https://www.example.com/elrodizio.jpg', 
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6606/document.pdf' 
+    },
+    { 
+      name: 'Smoke House', 
+      description: 'Texan-style smoked meats, slow-cooked and tender.', 
+      hours: '6:30 p.m. to 9:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/smokehouse.jpg', 
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6420/document.pdf' 
+    },
+    { 
+      name: 'La Geisha Japanese Restaurant', 
+      description: 'Teppanyaki-style Japanese dinner with sustainably caught fish.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Make reservation at the hotel', 
+      image: 'https://www.example.com/lageisha.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2060/document.pdf' 
+    },
+    { 
+      name: 'Bistró L’Etoile', 
+      description: 'French bistro serving traditional dishes like onion soup au gratin.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/letoile.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2061/document.pdf' 
+    },
+    { 
+      name: 'La Marina Seafood Restaurant', 
+      description: 'Seafood specialties like octopus tacos and grilled lobster.', 
+      hours: '7:00 a.m. to 11:00 a.m. | 6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://www.example.com/lamarina.jpg', 
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/6224/document.pdf' 
+    }
+  ];
+
+  return (
+    <div className="restaurants-page">
+      <nav className="navbar">
+        <Link to="/restaurants">🔙 Back to Restaurants</Link>
+      </nav>
+      <h1>Maya Restaurants</h1>
+      <div className="restaurant-cards-grid">
+        {restaurants.map((restaurant, index) => (
+          <div key={index} className="restaurant-card">
+            <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
+            <h2>{restaurant.name}</h2>
+            <p>{restaurant.description}</p>
+            <p><strong>Hours:</strong> {restaurant.hours}</p>
+            <p><strong>Dress Code:</strong> {restaurant.dressCode}</p>
+            <p><strong>Reservations:</strong> {restaurant.reservations}</p>
+            {restaurant.menu && (
+              <p>
+                <a href={restaurant.menu} target="_blank" rel="noopener noreferrer">
+                  <strong>See the menu</strong>
+                </a>
+              </p>
+            )}
+          </div>
         ))}
       </div>
     </div>
