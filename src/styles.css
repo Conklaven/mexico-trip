@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .welcome-page {
+    height: 100vh;
+    background: url('https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/3f7b2e32.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-content {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+  }
+  
+  .enter-trip {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .enter-trip:hover {
+    background-color: #e56c00;
+  }
+  
+  .options-page {
+    padding: 50px 20px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 150px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #333;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .timeline {
+    margin-top: 40px;
+  }
+  
+  .timeline-item {
+    background: white;
+    margin: 20px auto;
+    width: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-item h3 {
+    color: #ff7b00;
+  }
+  
