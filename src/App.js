@@ -180,7 +180,7 @@ const Restaurants = () => {
       dressCode: 'Smart casual', 
       reservations: 'Not necessary', 
       image: 'https://www.iberostargrandparaiso.com/images/restaurants/lateliar.jpg',
-      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/latelier/en-franc%C3%A9s?authuser=0'
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/2064/document.pdf'
     },
     { 
       name: 'Punta Sal', 
@@ -198,7 +198,7 @@ const Restaurants = () => {
       dressCode: 'Smart casual', 
       reservations: 'Required', 
       image: 'https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/14ecf498.jpg',
-      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/haiku-dinner/haiku_eng?authuser=0'
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6527/document.pdf'
     },
     { 
       name: 'Ember Steak House', 
