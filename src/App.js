@@ -12,7 +12,7 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/itinerary" element={<Itinerary />} />
           <Route path="/hotels" element={<Hotels />} />
-          <Route path="/meals" element={<Meals />} />
+          <Route path="/restaurants" element={<Restaurants />} />
         </Routes>
       </div>
     </Router>
@@ -40,14 +40,14 @@ const Options = () => {
         <Link to="/">🏠 Home</Link>
       </nav>
       <h1>Trip Options</h1>
-      <div className="cards">
+      <div className="cards options-cards">
         <Link to="/itinerary" className="card">
           <h2>Itinerary</h2>
         </Link>
         <Link to="/hotels" className="card">
           <h2>Hotels</h2>
         </Link>
-        <Link to="/meals" className="card">
+        <Link to="/restaurants" className="card">
           <h2>Restaurants</h2>
         </Link>
       </div>
@@ -160,15 +160,105 @@ const Hotels = () => {
   );
 };
 
-const Meals = () => {
+const Restaurants = () => {
+  const restaurants = [
+    { 
+      name: 'Mexican Cuisine - Legado', 
+      description: 'Try the best Mexican cuisine with fresh, local ingredients like chicken fajitas and tacos.', 
+      hours: 'Check the Iberostar app', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not required', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHh1sktJfwdJS6pia6LoMRiJzRLTJrdNsSBg&s',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
+    },
+    { 
+      name: 'L’Atelier Gourmet', 
+      description: 'Gourmet à la carte dishes like tuna tartare and duck confit.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not necessary', 
+      image: 'https://www.iberostargrandparaiso.com/images/restaurants/lateliar.jpg',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/latelier/en-franc%C3%A9s?authuser=0'
+    },
+    { 
+      name: 'Punta Sal', 
+      description: 'Ceviche, seafood, and grilled meats with ocean views.', 
+      hours: 'Lunch Time', 
+      dressCode: 'Check App', 
+      reservations: 'Not necessary', 
+      image: 'https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/6549e1e3.jpg',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/cevicher%C3%ADa-grill/en-cevicheria-grill?authuser=0'
+    },
+    { 
+      name: 'Haiku Japanese', 
+      description: 'Nikkei fusion with sushi, teppanyaki, and sashimi.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Required', 
+      image: 'https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/14ecf498.jpg',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/haiku-dinner/haiku_eng?authuser=0'
+    },
+    { 
+      name: 'Ember Steak House', 
+      description: 'Grilled meats and fish with stunning Caribbean views.', 
+      hours: 'Check the Iberostar app', 
+      dressCode: 'Informal by day, smart casual at night', 
+      reservations: 'Not required', 
+      image: 'https://lh6.googleusercontent.com/proxy/Rzv4BEr4vy3YTr0s96iQv6zsYqMxxE0VvD3lIunta4dC_CK8BcGcwVjv6hIoByl9me8q5sv6cAg_6aImhifiGhBn5iqH61A0jcE6EHfYNZFfDWeIul7PggOzLDQlJ3kdaJ98G_z5D2Yh9RvCzA',
+      menu: 'https://apiimg.iberostar.com/uploads/document/document/6735/document.pdf'
+    },
+    { 
+      name: 'Venecia Wine Cellar', 
+      description: 'Italian specialties with wine pairings and desserts like limoncello cream.', 
+      hours: '6:00 p.m. to 10:00 p.m.', 
+      dressCode: 'Smart casual', 
+      reservations: 'Not necessary', 
+      image: 'https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/6549e1e3.jpg',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
+    },
+    { 
+      name: 'Bella Vista Buffet', 
+      description: 'Buffet with international and Mexican specialties.', 
+      hours: '7:00 a.m. to 11:30 a.m. and 6:30 p.m. to 10:00 p.m.', 
+      dressCode: 'Casual', 
+      reservations: 'Not necessary', 
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/44/35/11/caption.jpg?w=1200&h=-1&s=1',
+      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
+    }
+  ];
+
+  const hotels = ['Maya', 'Lindo', 'Beach', 'Del Mar'];
+
   return (
-    <div className="meals-page">
+    <div className="restaurants-page">
       <nav className="navbar">
         <Link to="/options">🔙 Back to Options</Link>
       </nav>
       <h1>Restaurants</h1>
-      <p>All meals included at JOIA Paraiso (April 15th - 21st)</p>
-      <p>Meals at Intercontinental Cancun (April 21st - 22nd)</p>
+      <div className="restaurant-cards-grid">
+        {restaurants.map((restaurant, index) => (
+          <div key={index} className="restaurant-card">
+            <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
+            <h2>{restaurant.name}</h2>
+            <p>{restaurant.description}</p>
+            <p><strong>Hours:</strong> {restaurant.hours}</p>
+            <p><strong>Dress Code:</strong> {restaurant.dressCode}</p>
+            <p><strong>Reservations:</strong> {restaurant.reservations}</p>
+            <p><a href={restaurant.menu} target="_blank" rel="noopener noreferrer"><strong>Menu</strong></a></p>
+          </div>
+        ))}
+      </div>
+      <div className="complex-access">
+        <p>Access the entire Iberostar complex</p>
+        <p>Guests at JOIA Paraiso can enjoy buffets, bars, and à la carte restaurants across the entire Iberostar complex.</p>
+      </div>
+      <div className="hotel-cards-grid">
+        {hotels.map((hotel, index) => (
+          <Link to={`/hotel/${hotel.toLowerCase()}`} key={index} className="hotel-card">
+            <h2>{hotel}</h2>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

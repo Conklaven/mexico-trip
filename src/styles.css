@@ -42,6 +42,9 @@ body, html {
   .options-page {
     padding: 50px 20px;
   }
+  .options-cards{
+    justify-items: center;
+  }
   
   .cards {
     display: flex;
@@ -99,4 +102,57 @@ body, html {
   .timeline-item h3 {
     color: #ff7b00;
   }
+
+  .itinerary-page, .restaurants-page {
+    padding: 50px 20px;
+  }
+  
+  .cards, .restaurant-cards-grid, .hotel-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .card, .restaurant-card, .hotel-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover, .restaurant-card:hover, .hotel-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .restaurant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .restaurant-card h2 {
+    margin: 20px;
+  }
+  
+  .restaurant-card p {
+    margin: 0 20px 20px;
+    color: #666;
+  }
+  
+  .complex-access {
+    margin-top: 50px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .complex-access p {
+    margin: 10px 0;
+  }
+  
   
