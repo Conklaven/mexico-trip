@@ -272,7 +272,7 @@ const LindoRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/underthesea.jpg', 
+      image: 'https://digital.ihg.com/is/image/ihg/independent-riviera-maya-8537078348-2x1', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/1977/document.pdf' 
     },
     { 
@@ -281,7 +281,7 @@ const LindoRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/lemonspices.jpg', 
+      image: 'https://tropicality.com/wp-content/uploads/2024/07/iberostar-selection-parai%CC%81so-lindo-dining-lemon-spices-greek-tavern.jpg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/1902/document.pdf' 
     },
     { 
@@ -290,7 +290,7 @@ const LindoRestaurants = () => {
       hours: 'Lunch: 1:00 p.m. to 3:00 p.m. | Dinner: 6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/trattoria.jpg', 
+      image: 'https://digital.ihg.com/is/image/ihg/independent-riviera-maya-9160911274-2x1', 
       menu: 'https://apiimg.iberostar.com/uploads/document/document/6532/document.pdf' 
     },
     { 
@@ -299,7 +299,7 @@ const LindoRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/elrancho.jpg', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/10/3e/e6/aa/restaurante-steak-house.jpg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/6556/document.pdf' 
     },
     { 
@@ -308,7 +308,7 @@ const LindoRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/tapatio.jpg', 
+      image: 'https://apiimg.iberostar.com/uploads/image/61614/crops/16:9/1920/image.jpeg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2059/document.pdf' 
     }
   ];
@@ -350,7 +350,7 @@ const MayaRestaurants = () => {
       hours: '6:30 p.m. to 10:00 p.m.', 
       dressCode: 'Casual', 
       reservations: 'Reservations via mobile app', 
-      image: 'https://www.example.com/elrodizio.jpg', 
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/61/26/41/iberostar-grand-paraiso.jpg?w=1200&h=-1&s=1', 
       menu: 'https://apiimg.iberostar.com/uploads/document/document/6606/document.pdf' 
     },
     { 
@@ -359,7 +359,7 @@ const MayaRestaurants = () => {
       hours: '6:30 p.m. to 9:00 p.m.', 
       dressCode: 'Casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/smokehouse.jpg', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/10/1e/07/3f/restaurante-steak-house.jpg', 
       menu: 'https://apiimg.iberostar.com/uploads/document/document/6420/document.pdf' 
     },
     { 
@@ -368,7 +368,7 @@ const MayaRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Make reservation at the hotel', 
-      image: 'https://www.example.com/lageisha.jpg', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/10/3e/ed/e7/restaurante-japones-la.jpg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2060/document.pdf' 
     },
     { 
@@ -377,7 +377,7 @@ const MayaRestaurants = () => {
       hours: '6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/letoile.jpg', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/10/3e/e3/56/restaurante-gourmet-l.jpg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2061/document.pdf' 
     },
     { 
@@ -386,7 +386,7 @@ const MayaRestaurants = () => {
       hours: '7:00 a.m. to 11:00 a.m. | 6:00 p.m. to 10:00 p.m.', 
       dressCode: 'Smart casual', 
       reservations: 'Not required', 
-      image: 'https://www.example.com/lamarina.jpg', 
+      image: 'https://media-cdn.tripadvisor.com/media/photo-s/07/79/73/8c/iberostar-paraiso-maya.jpg', 
       menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/6224/document.pdf' 
     }
   ];
