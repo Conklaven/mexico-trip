@@ -138,7 +138,6 @@ const ImageSlider = ({ day }) => {
           src={day.images[currentIndex]}
           alt={day.activity}
           className="timeline-photo"
-          width={'400px'}
         />
       </div>
     </div>
