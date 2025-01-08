@@ -214,7 +214,7 @@ const Restaurants = () => {
       dressCode: 'Smart casual', 
       reservations: 'Not necessary', 
       image: 'https://images.trvl-media.com/lodging/3000000/2810000/2802500/2802472/6549e1e3.jpg',
-      menu: 'https://sites.google.com/iberostar.com/iberostar-grand-paraiso/legado/en-mexicano?authuser=0'
+      menu: 'https://hotels1.cdn.iberostar.com/uploads/document/document/2066/document.pdf'
     },
     { 
       name: 'Bella Vista Buffet', 
